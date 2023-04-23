@@ -68,7 +68,7 @@ int main()
 		case 9: printFlights(root); break;
 		case 10: deleteFlightsTree(root, head, tail); break;
 		case 11: findFlightByFlightId(ht, root, head); break;
-		case 12: findFlightByArrivalName(root); break;
+		case 12: findFlightByFragmentOfArrivalName(root); break;
 		case 13: buyTicket(ht, root, head, tail); break;
 		case 14: returnTicket(root, head, tail); break;
 		case 15: printTickets(head); break;

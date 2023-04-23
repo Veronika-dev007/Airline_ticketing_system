@@ -5,7 +5,8 @@
 #include "AVLtree.h"
 #include "DoubleList.h"
 #include <string>
-#include <algorithm>
+#include <sstream>
+#include <fstream>
 
 void get_passenger(string& id, string& info, string& name, string& date);
 string& trim(string& str, string const& whitespace= " \r\n\t\v\f");

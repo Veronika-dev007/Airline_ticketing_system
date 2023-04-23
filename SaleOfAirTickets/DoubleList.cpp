@@ -27,8 +27,7 @@ ListOfFlightTickets* findTicket(ListOfFlightTickets* head, string ticket) {
     return NULL;
 }
 
-vector<string> findAllFlightTicketsByPassportId(ListOfFlightTickets* head, string passport_id) {//возврашаем вектор flight_id всех пассажиров обнаруженных по passport_id
-    //vector<unique_ptr<TicketInfo>> v;
+vector<string> findAllFlightTicketsByPassportId(ListOfFlightTickets* head, string passport_id) {
     vector<string> v;
     ListOfFlightTickets* node = head;
     while (node != NULL) {
@@ -39,7 +38,7 @@ vector<string> findAllFlightTicketsByPassportId(ListOfFlightTickets* head, strin
     return v;
 }
 
-vector<string> findAllPassportTicketsByFlightId(ListOfFlightTickets* head, string flight_id) {//возвращаем вектор passport_id всех пассажиров которые купили билеты на этот рейс flight_id
+vector<string> findAllPassportTicketsByFlightId(ListOfFlightTickets* head, string flight_id) {
     vector<string> v;
     ListOfFlightTickets* node = head;
     while (node != NULL) {
@@ -51,37 +50,17 @@ vector<string> findAllPassportTicketsByFlightId(ListOfFlightTickets* head, strin
 }
 
 void deleteTicket(ListOfFlightTickets*& head, ListOfFlightTickets*& tail, ListOfFlightTickets* delNode) {
-    //ListOfFlightTickets* delNode = findTicket(head, ticket_id);
-    //if (!delNode)
-    //    return false;// "No such element in the list"
-
-    //if (head == delNode) {
-    //    head = delNode->next;
-    //    if (head)
-    //        head->prev = NULL;
-    //    else tail = NULL;
-    //}
-    //else {
-    //    delNode->prev->next = delNode->next;
-    //    if (delNode->next)
-    //        delNode->next->prev = delNode->prev;
-    //    else tail =NULL;//null delNode->prev
-    //}
-    //delete delNode;
-   
     if (delNode == head)
         head = head->next;
-    // If it was at the tail, advance the tail to the previous item
+  
     if (delNode == tail)
         tail = tail->prev;
 
-    // Remove from the list
     if (delNode->next)
         delNode->next->prev = delNode->prev;
     if (delNode->prev)
         delNode->prev->next = delNode->next;
 
-    // Free the removed node
     delete delNode;
 }
 
@@ -92,7 +71,6 @@ int deleteTicketByFlightId(ListOfFlightTickets*& head, ListOfFlightTickets*& tai
     while (ptr != NULL) {
         next = ptr->next;
         if (ptr->data.flight_id == flight_id) {
-            //increaseNumOfFreeSeats(tree, ptr->data.flight_id);
             deleteTicket(head, tail, ptr);
             countT++;
         }
@@ -101,7 +79,7 @@ int deleteTicketByFlightId(ListOfFlightTickets*& head, ListOfFlightTickets*& tai
     return countT;
 }
 
-int deleteTicketByPassportId(ListOfFlightTickets*& head, ListOfFlightTickets*& tail, Node* tree, string passport_id) {//&&
+int deleteTicketByPassportId(ListOfFlightTickets*& head, ListOfFlightTickets*& tail, Node* tree, string passport_id) {
     ListOfFlightTickets* ptr = head;
     ListOfFlightTickets* next;
     int countT = 0;

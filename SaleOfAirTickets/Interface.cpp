@@ -134,7 +134,7 @@ void findFlightByFlightId(HashTable* passengers, Node* flights, ListOfFlightTick
 	else cout << "Авиарейса с таким номером в системе нет\n";
 }
 
-void findFlightByArrivalName(Node* flights) {
+void findFlightByFragmentOfArrivalName(Node* flights) {
 	string arrival;
 	bool flag = false;
 	arrival = get_input(arrival, has_only_letters, "Введите фрагмет аэропорта прибытия: ", "\nВведите фрагмент аэропорта прибытия: ");

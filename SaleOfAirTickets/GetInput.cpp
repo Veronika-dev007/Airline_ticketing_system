@@ -63,7 +63,6 @@ int getIntNum(const string& basic_info, const string& error_info) {
 
 void get_flight(string& num, string& name, string& departure, string& arrival, string& date, string& time, unsigned int& seats, unsigned int& free_seats) {
 	cout << "Введите данные об авиарейсе\n";
-	//cin.ignore();
 	get_input(num, check_flight_id, "Номер авиарейса: ", "Формат AAA-NNN, где A-заглавная латинская буква, N-цифра.\nВведите номер авиарейса: ");
 	get_input(name, has_only_letters, "Название авиакомпании: ", "\nВведите название авиакомпании: ");
 	get_input(departure, has_only_letters, "Аэропорт отправления: ", "\nВведите аэропорт отправления: ");

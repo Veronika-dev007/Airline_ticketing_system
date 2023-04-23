@@ -18,7 +18,7 @@ void addFlight(Node*& root);
 void printFlights(Node*& root);
 void deleteFlightsTree(Node*& root, ListOfFlightTickets*& listHead, ListOfFlightTickets*& listTail);
 void findFlightByFlightId(HashTable* passengers, Node* flights, ListOfFlightTickets* listHead);
-void findFlightByArrivalName(Node* flights);
+void findFlightByFragmentOfArrivalName(Node* flights);
 void buyTicket(HashTable* passengers, Node* flights, ListOfFlightTickets*& listHead, ListOfFlightTickets*& listTail);
 void returnTicket(Node* flights, ListOfFlightTickets*& listHead, ListOfFlightTickets*& listTail);
 void printTickets(ListOfFlightTickets* listHead);

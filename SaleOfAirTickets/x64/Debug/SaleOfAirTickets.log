@@ -1,1 +1,9 @@
-﻿  SaleOfAirTickets.vcxproj -> D:\VS projects\Uni_projects\Cursovik_2_DS\SaleOfAirTickets\x64\Debug\SaleOfAirTickets.exe
+﻿  GetInput.cpp
+D:\VS projects\Uni_projects\Cursovik_2_DS\SaleOfAirTickets\SaleOfAirTickets\GetInput.cpp(99,51): warning C4838: conversion from 'int' to 'unsigned int' requires a narrowing conversion
+D:\VS projects\Uni_projects\Cursovik_2_DS\SaleOfAirTickets\SaleOfAirTickets\GetInput.cpp(99,65): warning C4838: conversion from 'int' to 'unsigned int' requires a narrowing conversion
+D:\VS projects\Uni_projects\Cursovik_2_DS\SaleOfAirTickets\SaleOfAirTickets\GetInput.cpp(136,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  HashTable.cpp
+  Interface.cpp
+  SaleOfAirTickets.cpp
+  Generating Code...
+  SaleOfAirTickets.vcxproj -> D:\VS projects\Uni_projects\Cursovik_2_DS\SaleOfAirTickets\x64\Debug\SaleOfAirTickets.exe
