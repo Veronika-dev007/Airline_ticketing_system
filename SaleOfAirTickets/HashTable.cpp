@@ -31,7 +31,7 @@ void delete_table(HashTable* table) {
 
 int hash_function(string id) {
 	unsigned int hash = 0;
-	for (int i = 0; i < id.size(); i++)
+	for (size_t i = 0; i < id.size(); i++)
 		sum += pow((int)id[i], 2);
 	return sum % SIZE;
 }
