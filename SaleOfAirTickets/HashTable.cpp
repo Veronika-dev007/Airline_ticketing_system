@@ -32,9 +32,14 @@ void delete_table(HashTable* table) {
 int hash_function(string id) {
 	unsigned int hash = 0;
 	for (size_t i = 0; i < id.size(); i++)
+<<<<<<< HEAD
 		hash = ((SIZE - 1) * hash + id[i]) % SIZE;
 	hash = (hash * 2 + 1) % SIZE;
 	return hash;
+=======
+		sum += pow((int)id[i], 2);
+	return sum % SIZE;
+>>>>>>> 857eb294fc06f4628fe05b53c5e1e7927793130c
 }
 
 void print_table(HashTable* table) {
